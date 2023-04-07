@@ -27,11 +27,13 @@ export default function selectBox() {
       formPopup.classList.remove("open");
       pgOverLay.classList.remove("open");
       isOpen = false;
+
     });
   }
   pgOverLay.addEventListener("click", () => {
     formPopup.classList.remove("open");
     pgOverLay.classList.remove("open");
     isOpen = false;
+
   })
 }
