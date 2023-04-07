@@ -1,0 +1,29 @@
+// css button
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.btn-submit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 172px;
+    padding: 0.8rem 5rem;
+    border: none;
+    border-radius: 5rem;
+    background-color: $foreign;
+    color: $white;
+    font-size: 2rem;
+    font-weight: 500;
+    .arrow {
+      margin-left: 2rem;
+    }
+  }
+}

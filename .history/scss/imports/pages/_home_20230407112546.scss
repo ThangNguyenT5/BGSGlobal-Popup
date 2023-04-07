@@ -1,0 +1,186 @@
+// CSS HOMEPAGE
+.schero {
+  height: 100vh;
+  margin: {
+    left: auto;
+    right: auto;
+  }
+}
+
+.open {
+  width: 100%;
+  padding-top: 5rem;
+  z-index: 1;
+}
+.popup {
+  height: 100vh;
+  position: relative;
+  transition: all 0.3s linear;
+  form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.3s linear;
+  }
+
+}
+.regist {
+  width: calc(4/12*100%);
+  margin: 0 auto;
+  padding: 5rem;
+  border-radius: 0.4rem;
+  background-color: $white;
+  position: relative;
+  z-index: 1;
+  display: none;
+  visibility: hidden;
+  opacity: 0;
+  &.open {
+    display: block;
+    visibility: visible;
+    opacity: 1;
+  }
+  @include xl {
+    width: calc(5/12*100%);
+    padding: 5rem 4rem;
+  }
+  @include lg {
+    width: calc(6/12*100%);
+  }
+  @include md {
+    width: calc(7/12*100%);
+  }
+  @include sm {
+    width: calc(8/12*100%);;
+    padding: 3rem;
+  }
+  @include xs {
+    width: calc(9/12*100%);;
+    padding: 3rem 2rem;
+  }
+  .form-tt {
+    font-size: 3rem;
+    font-weight: 600;
+    text-align: center;
+    color: $primary;
+    margin-bottom: 3.2rem;
+
+    @include xl {
+      font-size: 2.5rem;
+    }
+    @include lg {
+      font-size: 2rem;
+    }
+    @include sm {
+      margin-bottom: 2rem;
+    }
+  }
+  .form-control {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    margin-bottom: 3.2rem;
+
+    @include sm {
+      flex-direction: column;
+      align-items: flex-start;
+      margin-bottom: 2rem;
+
+    }
+
+    label {
+      width: 120px;
+      font-size: 2rem;
+      font-weight: 500;
+      color: $body-text;
+      white-space: nowrap;
+      // margin-right: 2rem;
+
+      @include lg {
+        font-size: 1.8rem;
+      }
+      @include xs {
+        font-size: 1.6rem;
+      }
+    }
+    input {
+      flex: 1;
+      padding: 0.8rem 2rem;
+      outline: none;
+      border: 1px solid $sub-text;
+      border-radius: 0.5rem;
+      cursor: pointer;
+      transition: all 0.3s linear;
+
+      @include sm {
+        width: 100%;
+      }
+
+      &:hover {
+        border: 1px solid $foreign;
+      }
+      &:focus {
+        border: 1px solid $foreign;
+
+      }
+      ::placeholder {
+        color: $sub-text;
+      }
+    }
+    select {
+      flex: 1;
+      width: 100%;
+      padding: 0.8rem 1.5rem;
+      color: $sub-text;
+      border-radius: 0.5rem;
+      border: 1px solid $sub-text;
+      outline: none;
+      cursor: pointer;
+      transition: all 0.3s linear;
+
+      // arrow
+      -moz-appearance:none; /* Firefox */
+      -webkit-appearance:none; /* Safari and Chrome */
+      appearance:none;
+      background-image: url(../../../img/icon-chevdown.svg);
+      background-position:  right 2rem center;
+      background-repeat: no-repeat;
+
+      option {
+        width: 100%;
+      }
+      @include sm {
+        width: 100%;
+      }
+
+      &:hover {
+        border: 1px solid $foreign;
+      }
+
+    }
+  }
+}
+
+
+
+
+.bg-pg {
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  transition: all 0.5s linear;
+  z-index: 0;
+  &.open {
+    visibility: visible;
+    opacity: 1;
+  }
+}

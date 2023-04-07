@@ -1,0 +1,33 @@
+// CSS HOMEPAGE
+.schero {
+  height: 100vh;
+  margin: {
+    left: auto;
+    right: auto;
+  }
+}
+
+
+.popup {
+  background-color: $white;
+  margin: auto auto;
+}
+.regist {
+  width: 762px;
+  margin: auto;
+  padding: 1rem;
+  background-color: $body-text;
+}
+
+.bg-pg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #ccc;
+  opacity: 0.5;
+  z-index: -1;
+}

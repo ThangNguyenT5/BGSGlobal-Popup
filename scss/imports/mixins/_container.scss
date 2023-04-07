@@ -1,0 +1,16 @@
+.container,
+.container-fluid {
+  max-width: $container-width;
+  width: 100%;
+  padding-left: calc(var(--container-padding-x) * 0.5);
+  padding-right: calc(var(--container-padding-x) * 0.5);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container-fluid {
+  @include sm-min {
+    padding-right: calc(var(--container-padding-x));
+    padding-left: calc(var(--container-padding-x));
+  }
+}

@@ -1,0 +1,74 @@
+@import url(../../fonts/stylesheet.css);
+
+@-ms-viewport {
+  width: device-width;
+}
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%; // => 10px = 1rem
+  scroll-behavior: smooth;
+  @include minW(2000px) {
+    font-size: 100%;
+  }
+}
+body {
+  width: 100%;
+  max-width: $container-max-width;
+  margin: auto;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Montserrat';  // tuỳ chỉnh
+  font-size: var(--body16-fs); // tuỳ chỉnh
+  line-height: var(--body16-lh); // tuỳ chỉnh
+  color: $body-text; // tuỳ chỉnh
+  background: $bg-main;
+  position: relative;
+  overflow-x: hidden;
+  touch-action: pan-y;
+
+  .pt-sc,
+  .py-sc {
+    padding-top: var(--pd-section);
+  }
+  .pb-sc,
+  .py-sc {
+    padding-bottom: var(--pd-section);
+  }
+
+  main {
+    width: 100%;
+    margin: 0 auto;
+  }
+  section {
+    position: relative;
+  }
+  footer {
+    margin-top: auto;
+  }
+  @include xl {
+    // CSS responsive large desktop
+  }
+  @include lg {
+    // CSS responsive  desktop
+  }
+  @include md {
+    // CSS responsive tablet
+  }
+  @include sm {
+    // CSS responsive mobile
+  }
+  @include xs {
+    // CSS responsive small mobile
+  }
+  @include xxs {
+    // CSS responsive smallest mobile
+  }
+}

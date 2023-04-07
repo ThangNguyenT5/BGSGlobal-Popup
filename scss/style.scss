@@ -1,0 +1,25 @@
+/* CORE - MIXINS*/
+@import "imports/core/reset";
+@import "imports/core/variables";
+@import "imports/mixins/responsive";
+@import "imports/mixins/container";
+@import "imports/core/layouts";
+@import "imports/core/animations";
+@import "imports/core/loading";
+
+
+// VENDORS
+@import "imports/vendors/swiper";
+@import "imports/vendors/libs";
+
+// components
+@import "imports/components/components";
+@import "imports/components/buttons";
+
+// LAYOUT
+@import "imports/layout/header";
+@import "imports/layout/nav";
+@import "imports/layout/footer";
+
+//  Pages
+@import "imports/pages/home";

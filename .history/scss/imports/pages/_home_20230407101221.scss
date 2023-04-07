@@ -1,0 +1,289 @@
+// CSS HOMEPAGE
+.schero {
+  height: 100vh;
+  margin: {
+    left: auto;
+    right: auto;
+  }
+}
+
+
+.popup {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  transition: all 0.3s linear;
+  form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.3s linear;
+  }
+}
+.regist {
+  width: calc(4/12*100%);
+  margin: 0 auto;
+  padding: 5rem;
+  border-radius: 1rem;
+  background-color: $white;
+  position: relative;
+  @include xl {
+    width: calc(5/12*100%);
+    padding: 5rem 4rem;
+  }
+  @include lg {
+    width: calc(6/12*100%);
+  }
+  @include md {
+    width: calc(7/12*100%);
+  }
+  @include sm {
+    width: calc(8/12*100%);;
+    padding: 3rem;
+  }
+  .form-tt {
+    font-size: 3rem;
+    font-weight: 600;
+    text-align: center;
+    color: $primary;
+    margin-bottom: 3.2rem;
+
+    @include xl {
+      font-size: 2.5rem;
+    }
+    @include lg {
+      font-size: 2rem;
+    }
+    @include sm {
+      margin-bottom: 2rem;
+    }
+  }
+  .form-control {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    margin-bottom: 3.2rem;
+
+    @include sm {
+      flex-direction: column;
+      align-items: flex-start;
+      margin-bottom: 2rem;
+
+    }
+
+    label {
+      width: 120px;
+      font-size: 2rem;
+      font-weight: 500;
+      color: $body-text;
+      white-space: nowrap;
+      // margin-right: 2rem;
+    }
+    input {
+      flex: 1;
+      padding: 0.8rem 2rem;
+      outline: none;
+      border: 1px solid $sub-text;
+      border-radius: 0.5rem;
+      cursor: pointer;
+      transition: all 0.3s linear;
+
+      @include sm {
+        width: 100%;
+      }
+
+      &:hover {
+        border: 1px solid $foreign;
+      }
+      &:focus {
+        border: 1px solid $foreign;
+
+      }
+      ::placeholder {
+        color: $sub-text;
+      }
+    }
+    select {
+      flex: 1;
+      padding: 0.8rem 1.5rem;
+      color: $sub-text;
+      border-radius: 0.5rem;
+      border: 1px solid $sub-text;
+      outline: none;
+      cursor: pointer;
+      transition: all 0.3s linear;
+
+      // arrow
+      // -moz-appearance:none; /* Firefox */
+      // -webkit-appearance:none; /* Safari and Chrome */
+      // appearance:none;
+      // background-image: url(../../../img/icon-chevdown.svg);
+      // background-position:  right 2rem center;
+      // background-repeat: no-repeat;
+
+      // .option {
+      //   color: $black;
+      // }
+
+      @include sm {
+        width: 100%;
+      }
+
+      &:hover {
+        border: 1px solid $foreign;
+      }
+
+    }
+    // .icon-chevdown {
+    //   position: absolute;
+    //   top: 50%;
+    //   right: 1rem;
+    //   transform: translateY(-50%);
+    //   width: 2.4rem;
+    //   height: 2.4rem;
+    //   display: flex;
+    //   align-items: center;
+    //   justify-content: center;
+    //   cursor: pointer;
+    // }
+  }
+}
+
+
+
+
+.bg-pg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: -1;
+}
+
+// a
+
+.select_mate {
+  flex: 1;
+  width: 100%;
+}
+.select-box {
+  position: relative;
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  color: #60666d;
+  
+  // @media (min-width: 768px) {
+  //   width: 70%;
+  // }
+  
+  // @media (min-width: 992px) {
+  //   width: 50%;
+  // }
+  
+  // @media (min-width: 1200px) {
+  //   width: 30%;
+  // }
+  
+  &__current {
+    position: relative;
+    box-shadow: 0 15px 30px -10px transparentize(#000, 0.9);
+    cursor: pointer;
+    outline: none;
+    
+    &:focus {
+      & + .select-box__list {
+        opacity: 1;
+
+        // We have to set "animation-name: none;" to make the list visible (read below how it works)
+
+        animation-name: none;
+        
+        .select-box__option {
+          cursor: pointer;
+        }
+      }
+      
+      .select-box__icon {
+        transform: translateY(-50%) rotate(180deg);
+      }
+    }
+  }
+  
+  &__icon {
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    width: 20px;
+    opacity: 0.3;
+    transition: 0.2s ease;
+  }
+  
+  &__value {
+    display: flex;
+  }
+  
+  &__input {
+    display: none;
+    
+    &:checked + .select-box__input-text {
+      display: block;
+    }
+  }
+  
+  &__input-text {
+    display: none;
+    width: 100%;
+    margin: 0;
+    padding: 15px;
+    background-color: #fff;
+  }
+  
+  &__list {
+    position: absolute;
+    width: 100%;
+    padding: 0;
+    list-style: none;
+    opacity: 0;
+    
+    // We need to use animation with delay.
+    // Otherwise the click event will not have time to run on label, because this element disapears immediately when .select-box__current element loses the focus.
+    // This delay will not be noticed because we set "opacity" to "0".
+    // We also use "animation-fill-mode: forwards" to make the list stay hidden.
+    
+    animation-name: HideList;
+    animation-duration: 0.5s;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: step-start;
+    box-shadow: 0 15px 30px -10px transparentize(#000, 0.9);
+  }
+  
+  &__option {
+    display: block;
+    padding: 15px;
+    background-color: #fff;
+    
+    &:hover,
+    &:focus {
+      color: #546c84;
+      background-color: #fbfbfb;
+    }
+  }
+}
+
+@keyframes HideList {
+  from {
+    transform: scaleY(1);
+  }
+  to {
+    transform: scaleY(0);
+  }
+}

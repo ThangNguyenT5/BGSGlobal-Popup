@@ -1,0 +1,111 @@
+//======================================================BOXED LAYOUT=======================================================
+
+$container-max-width: 100%; // GIỮ NGUYÊN
+$container-width: calc((120rem + var(--container-padding-x))); // WIDTH CONTAINER ĐO TỪ BẢN THIẾT KẾ
+
+/*GRID - media queries breakpoints*/
+$xxs-min: 440px;
+$xs-min: 576px; // CÓ THỂ TÙY CHỈNH
+$sm-min: 768px; // KHÔNG THAY ĐỔI
+$md-min: 992px; // KHÔNG THAY ĐỔI
+$lg-min: 1200px; // KHÔNG THAY ĐỔI
+$xl-min: 1440px; // CÓ THỂ TÙY CHỈNH
+
+$xxs-max: ($xxs-min - 0.02); // Smallest Mobile
+$xs-max: ($xs-min - 0.02); // Small Mobile
+$sm-max: ($sm-min - 0.02); // Mobile
+$md-max: ($md-min - 0.02); // Tablet
+$lg-max: ($lg-min - 0.02); // Desktop
+$xl-max: ($xl-min - 0.02); // Large Desktop
+
+//=====================================CÁC BIẾN KHÔNG THAY ĐỔI GIÁ TRỊ KHI RESPONSIVE======================================
+
+// colors - tuỳ chỉnh theo thiết kế
+$bg-main: #fff;
+$white: #fff;
+$black: #000;
+$black-main: #231f20;
+
+$primary: #1E2858;
+$second: #F57E26;
+$body-text: #444;
+
+$line: #ccc;
+
+// base-radius - tuỳ chỉnh theo thiết kế
+$radius: 0.4rem;
+
+// gradient - tuỳ chỉnh theo thiết kế
+$gradient-cl: linear-gradient(
+  90deg,
+  #110e0a 0%,
+  #110e0a 80.93%,
+  rgba(17, 14, 10, 0) 100%
+);
+
+// timing transition - tuỳ chỉnh
+$t: 0.4s;
+$t2: 0.6s;
+$t3: 1s;
+$cubic: cubic-bezier(0.61, 0.22, 0.23, 1);
+
+// SHADOW
+$shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
+// Z-INDEX - tuỳ chỉnh
+$z-dropdown: 100;
+$z-sticky: 200;
+$z-fixed: 300;
+$z-modal: 400;
+// ========================================CÁC BIẾN CÓ THAY ĐỔI GIÁ TRỊ KHI RESPONSIVE=====================================
+
+:root {
+  // font-size & line-height heading tuỳ chỉnh theo thiết kế
+
+  --h1-fs: 4rem;
+  --h1-lh: 1.2;
+
+  --h2-fs: 3.6rem;
+  --h2-lh: 1.25;
+
+  --h3-fs: 2.4rem;
+  --h3-lh: 1.3;
+
+  --h4-fs: 2rem;
+  --h4-lh: 1.4;
+
+  --body16-fs: 1.6rem;
+  --body16-lh: 1.5;
+
+  --body14-fs: 1.4rem;
+  --body14-lh: 1.5;
+
+  
+  --container-padding-x: 3rem;
+  --height-header: 80px;
+  --height-button: 4.8rem;
+  --ptop: 150px;
+  --pd-section: 8rem;
+  --space-value: 0.4rem;
+
+  @media (max-width: $md-max) {
+    // Tablet
+  }
+  @media (max-width: $sm-max) {
+    // Mobile
+    --h1-fs: 3.6rem;
+
+    --h2-fs: 2.8rem;
+
+    --h3-fs: 2.2rem;
+
+    --h4-fs: 2rem;
+
+    --container-padding-x: 2rem;
+
+    --height-header: 70px;
+    --pd-section: 4rem;
+    --ptop: 120px;
+    --space-value: 0.3rem;
+  }
+}
