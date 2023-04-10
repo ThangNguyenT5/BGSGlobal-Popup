@@ -1276,7 +1276,6 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-width: 18rem;
   padding: 0.8rem 5rem;
   border: none;
   border-radius: 5rem;
@@ -1285,9 +1284,7 @@ a {
   font-size: 2rem;
   font-weight: 500;
   cursor: pointer;
-  overflow: hidden;
   position: relative;
-  transition: all 0.3s ease-in-out;
 }
 .mona-wrapper-popup .btn-submit button::after {
   content: "";
@@ -1295,21 +1292,20 @@ a {
   width: 100%;
   height: 100%;
   background-color: #1E2858;
-  border-radius: 50rem;
+  border-radius: 5rem;
   top: 0;
   left: 0;
-  z-index: -1;
+  z-index: 0;
   transform: scaleX(0);
-  transition: all 0.3s ease-in-out;
-}
-.mona-wrapper-popup .btn-submit button:hover::after {
-  background-color: #1E2858;
-  transform: scaleX(1);
-  transition: all 0.3s ease-in-out;
 }
 .mona-wrapper-popup .btn-submit button:hover {
   background-color: transparent;
   color: #fff;
+}
+.mona-wrapper-popup .btn-submit button:hover button::after {
+  background-color: #F57E26;
+  transform: scaleX(1);
+  transform-origin: center left;
 }
 .mona-wrapper-popup .btn-submit button .arrow {
   width: 23px;
@@ -1325,8 +1321,8 @@ a {
 }
 .mona-wrapper-popup .btn-close {
   position: absolute;
-  top: -2.3rem;
-  right: -2.3rem;
+  top: -2.5rem;
+  right: -3.5rem;
   width: 46px;
   height: 46px;
   background-color: #fff;
@@ -1341,7 +1337,7 @@ a {
   transition: all 0.2s linear;
 }
 .mona-wrapper-popup .btn-close:hover .close {
-  transform: rotate(180deg);
+  transform: scale(1.1);
 }
 
 .select2.select2-container {
@@ -1362,12 +1358,6 @@ a {
 .select2.select2-container .select2-selection .select2-selection__rendered {
   line-height: 32px;
   padding: 0.2rem 2rem;
-}
-@media (max-width: 439.98px) {
-  .select2.select2-container .select2-selection .select2-selection__rendered {
-    font-size: 1.2rem;
-    padding: 0.8rem 1.2rem;
-  }
 }
 
 .select2.select2-container .select2-selection .select2-selection__arrow {
@@ -1439,12 +1429,6 @@ a {
   top: 50%;
   transform: translateY(-50%);
   right: 2rem;
-}
-@media (max-width: 439.98px) {
-  .select2.select2-container .select2-selection .select2-selection__arrow {
-    width: 1.6rem;
-    height: 1.6rem;
-  }
 }
 
 .select2-container--default .select2-selection--single .select2-selection__arrow b {
@@ -1590,11 +1574,6 @@ a {
     width: 100%;
   }
 }
-@media (max-width: 439.98px) {
-  .mona-wrapper-popup .regist .form-control input {
-    padding: 0.8rem 1.2rem;
-  }
-}
 .mona-wrapper-popup .regist .form-control input:hover {
   border: 1px solid #F57E26;
 }
@@ -1603,11 +1582,6 @@ a {
 }
 .mona-wrapper-popup .regist .form-control input::placeholder {
   color: #B4B4B4;
-}
-@media (max-width: 439.98px) {
-  .mona-wrapper-popup .regist .form-control input::placeholder {
-    font-size: 1.2rem;
-  }
 }
 .mona-wrapper-popup .regist .form-control select {
   flex: 1;

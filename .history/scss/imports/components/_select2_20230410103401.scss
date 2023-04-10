@@ -1,4 +1,6 @@
 // SELECT 2
+
+
 .select2.select2-container {
     width: 100% !important;
     transition: all 0.3s linear;
@@ -23,7 +25,6 @@
     padding: 0.2rem 2rem;
     @include xxs {
       font-size: 1.2rem;
-      padding: 0.8rem 1.2rem;
     }
   }
   
@@ -88,16 +89,16 @@
     color: $sub-text;
     
   }
+
+  
+
+
   .select2.select2-container .select2-selection .select2-selection__arrow {
     background-image: url(../img/icon-chevdown.svg);
     background-repeat: no-repeat;
     background-position: center;
     width: 2.4rem;
     height: 2.4rem;
-    @include xxs {
-      width: 1.6rem;
-      height: 1.6rem;
-    }
     top: 50%;
     transform: translateY(-50%);
     right: 2rem;
@@ -110,4 +111,8 @@
 
   .select2.select2-container .select2-selection:hover {
     border: 1px solid $foreign;
+  }
+
+  .select2.select2-container .select2-selection .select2-selection__rendered {
+
   }

@@ -94,10 +94,6 @@
     background-position: center;
     width: 2.4rem;
     height: 2.4rem;
-    @include xxs {
-      width: 1.6rem;
-      height: 1.6rem;
-    }
     top: 50%;
     transform: translateY(-50%);
     right: 2rem;

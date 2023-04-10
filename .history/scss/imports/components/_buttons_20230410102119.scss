@@ -80,8 +80,8 @@
   
   .btn-close {
     position: absolute;
-    top: -2.3rem;
-    right: -2.3rem;
+    top: -2.5rem;
+    right: -3.5rem;
     width: 46px;
     height: 46px;
     background-color: $white;
@@ -96,7 +96,7 @@
     }
     &:hover {
       .close {
-        transform: rotate(180deg);
+        transform: scale(1.05);
       }
     }
   }

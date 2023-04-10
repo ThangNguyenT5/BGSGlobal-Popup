@@ -7,7 +7,7 @@
   }
 }
 
-.mona-wrapper-popup {
+.wrapper-popup {
   .btn-open-box {
     width: 100%;
     position: relative;
@@ -23,6 +23,7 @@
       transform: translate(-50%, -50%);
       transition: all 0.3s linear;
     }
+  
   }
   .regist {
     width: calc(4/12*100%);
@@ -64,6 +65,7 @@
       text-align: center;
       color: $primary;
       margin-bottom: 3.2rem;
+  
       @include xl {
         font-size: 2.5rem;
       }
@@ -80,11 +82,14 @@
       justify-content: space-between;
       position: relative;
       margin-bottom: 3.2rem;
+  
       @include sm {
         flex-direction: column;
         align-items: flex-start;
         margin-bottom: 2rem;
+  
       }
+  
       label {
         width: 120px;
         flex-shrink: 0;
@@ -107,23 +112,20 @@
         border-radius: 0.5rem;
         cursor: pointer;
         transition: all 0.3s linear;
+  
         @include sm {
           width: 100%;
         }
-        @include xxs {
-          padding: 0.8rem 1.2rem;
-        }
+  
         &:hover {
           border: 1px solid $foreign;
         }
         &:focus {
           border: 1px solid $foreign;
+  
         }
         &::placeholder {
           color: $sub-text;
-          @include xxs {
-            font-size: 1.2rem;
-          }
         }
       }
       select {
@@ -136,18 +138,23 @@
         outline: none;
         cursor: pointer;
         transition: all 0.3s linear;
+  
         option {
           width: 100%;
         }
         @include sm {
           width: 100%;
         }
+  
         &:hover {
           border: 1px solid $foreign;
         }
+  
       }
     }
   }
+  
+  
   .bg-pg {
     position: absolute;
     visibility: hidden;
@@ -166,5 +173,9 @@
       opacity: 1;
     }
   }
+  
+
+
+
 }
 

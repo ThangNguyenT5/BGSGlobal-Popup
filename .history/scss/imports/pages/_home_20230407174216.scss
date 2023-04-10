@@ -110,9 +110,6 @@
         @include sm {
           width: 100%;
         }
-        @include xxs {
-          padding: 0.8rem 1.2rem;
-        }
         &:hover {
           border: 1px solid $foreign;
         }
@@ -121,9 +118,6 @@
         }
         &::placeholder {
           color: $sub-text;
-          @include xxs {
-            font-size: 1.2rem;
-          }
         }
       }
       select {

@@ -109,8 +109,6 @@
         transition: all 0.3s linear;
         @include sm {
           width: 100%;
-        }
-        @include xxs {
           padding: 0.8rem 1.2rem;
         }
         &:hover {

@@ -1,0 +1,35 @@
+import backToTop from "../js/modules/backToTop.js";
+import AosModule from "../js/modules/AosModule.js";
+import PopupModule from "../js/modules/PopupModule.js";
+import ScrollModule from "../js/modules/ScrollModule.js";
+import SliptModule from "../js/modules/SliptModule.js";
+import LocomotiveScrollModule from "../js/modules/LocomotiveScrollModule.js";
+import ToggleMenu from "../js/modules/ToggleMenu.js";
+import ToggleSearch from "../js/modules/ToggleSearch.js";
+import SwiperModule from "../js/modules/SwiperModule.js";
+import CheckedField from "../js/modules/CheckedField.js";
+import ProgressScroll from "../js/modules/ProgressScroll.js";
+import GalleryModule from "../js/modules/GalleryModule.js";
+import CollapseDescBook from "../js/modules/CollapseDescBook.js";
+import ScrollDownDesc from "../js/modules/ScrollDownDesc.js";
+import SelectMap from "../js/modules/SelectMap.js";
+import PlayVideo from "../js/modules/PlayVideo.js";
+
+window.addEventListener("DOMContentLoaded", () => {
+  backToTop();
+  AosModule();
+  PopupModule();
+  ScrollModule();
+  SliptModule();
+  LocomotiveScrollModule();
+  ToggleMenu();
+  ToggleSearch();
+  SwiperModule();
+  CheckedField();
+  ProgressScroll();
+  GalleryModule();
+  CollapseDescBook();
+  ScrollDownDesc();
+  SelectMap();
+  PlayVideo();
+});
